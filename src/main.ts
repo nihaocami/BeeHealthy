@@ -10,4 +10,10 @@ function getRandomImage(): string {
   return images[randomIndex].replace("-intro", "");
 }
 
-imageContainer.src = getRandomImage();
+function changeImage() {
+  imageContainer.src = getRandomImage();
+}
+
+imageContainer.addEventListener("click", changeImage);
+
+changeImage();
